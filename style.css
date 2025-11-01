@@ -1,0 +1,547 @@
+:root {
+  --vino: #4b000f;
+  --vino-oscuro: #2e000a;
+  --vino-brillo: #800020;
+  --blanco: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: var(--vino-oscuro);
+  color: var(--blanco);
+}
+
+/* --- MENÚ --- */
+.navbar {
+  background-color: var(--vino);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: var(--blanco);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--vino-brillo);
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.toggle-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+  .toggle-btn { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--vino-oscuro);
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  #toggle-menu:checked + .toggle-btn + .nav-links { display: flex; }
+}
+
+/* --- MOSAICO DE IMÁGENES --- */
+.mosaico {
+  padding: 6rem 5rem 4rem; /* margen superior para menú fijo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1500px;
+}
+
+.grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* --- NOTICIAS --- */
+.noticias {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--vino);
+}
+
+.noticias h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--vino-oscuro);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.contenido {
+  padding: 1.5rem;
+}
+
+.contenido h3 {
+  color: var(--vino-brillo);
+  margin-bottom: 0.5rem;
+}
+
+.contenido p {
+  color: #f9eaea;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ MOSAICO DE NOTICIAS */
+.ninos .noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  gap: 1.5rem;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 10%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #4b000f;
+}
+
+
+
+
+
+.mosaico {
+  padding: 6rem 4rem;
+  text-align: center;
+  background-color: #8b001f33; /* vino suave con transparencia */
+}
+
+.mosaico h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff0f0; /* más contraste sobre el fondo */
+}
+
+/* GRID FLEXIBLE */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CUADROS INDIVIDUALES */
+.cuadro {
+  background-color: #fff0f0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  width: 20%;
+}
+
+.cuadro:hover {
+  transform: translateY(-5px);
+}
+
+.cuadro img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cuadro button {
+  padding: 0.5rem 1rem;
+  background-color: #800020;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cuadro button:hover {
+  background-color: #b30000;
+}
+
+.cuadro h3 {
+  margin: 0.5rem 0;
+  color: #b30000;
+}
+
+.cuadro p {
+  font-size: 0.95rem;
+  color: #4b000f;
+}
+
+
+
+/* === CONTENEDOR DE PELÍCULAS === */
+.peliculas-container {
+    display: flex;
+    flex-direction: column; /* Vertical */
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* === TARJETA DE PELÍCULA === */
+.pelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #555151;
+    border: 1px solid #800020;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(128, 0, 32, 0.2);
+    width: 90%;
+    max-width: 500px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.pelicula:hover {
+    transform: scale(1.02);
+}
+
+.pelicula img {
+    width: 50%;     
+    height: 350px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info h2 {
+    margin: 0 0 10px 0;
+    color: #800020;
+}
+
+.info p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* === BOTÓN DE COMPRA === */
+.boton {
+    display: inline-block;
+    background-color: #800020;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #a0002a;
+}
+
+
+
+.horarios-container {
+    width: 350px;
+    border: 2px solid #800020;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(128, 0, 32, 0.3);
+    text-align: center;
+}
+
+.horarios-container h2 {
+    margin-bottom: 20px;
+    color: #800020;
+}
+
+/* === TABLA DE HORARIOS === */
+table.horarios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.horarios th,
+table.horarios td {
+    border: 1px solid #800020;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Encabezados */
+table.horarios th {
+    background-color: #800020;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+/* Estados de horario */
+.abierto {
+    background-color: #800020;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.cerrado {
+    background-color: #cccccc; /* gris claro para cerrado */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.map-container {
+    width: 100%;
+    height: 300px; /* ocupa toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+.mosaico2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.columna2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imagen-con-texto2 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.imagen-con-texto2 img {
+    width: 30%;
+    display: block;
+    border-radius: 10px;
+}
+
+.imagen-con-texto2 p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 50%;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+promociones {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #4b001f; /* vino oscuro */
+    border-radius: 15px;
+    text-align: center;
+    color: #fff; /* texto blanco */
+}
+
+.promociones h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ff4d6d; /* rojo suave */
+}
+
+/* Cada promoción */
+.promocion {
+    background-color: #7f1d2b; /* vino más claro */
+    border: 2px solid #ff4d6d; /* borde rojo */
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promocion h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff0f5; /* rosa blanco */
+}
+
+.promocion p {
+    font-size: 1.1em;
+    color: #ffecec; /* blanco suave */
+}
+
+/* Efecto hover para resaltar */
+.promocion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Diferenciar promociones */
+.promocion.lunes {
+    border-color: #ff1a3c;
+    background-color: #8b0c2d;
+}
+
+.promocion.viernes {
+    border-color: #ff4d6d;
+    background-color: #a1002f;
+}
+
+.mosaico3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cada imagen */
+.imagen {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.imagen:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilo del texto sobre la imagen */
+.texto {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Diseño responsivo: en pantallas pequeñas, el mosaico se adapta a 2 columnas */
+@media (max-width: 768px) {
+    .mosaico {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Diseño aún más responsivo: en pantallas muy pequeñas, el mosaico será una sola columna */
+@media (max-width: 480px) {
+    .mosaico {
+        grid-template-columns: 1fr;
+    }
+}
