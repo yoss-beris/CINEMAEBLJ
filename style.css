@@ -1,0 +1,71 @@
+:root {
+  --vino: #4b000f;
+  --vino-oscuro: #2e000a;
+  --vino-brillo: #800020;
+  --blanco: #b90808;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Playfair Display',serif;  background-color: var(--vino-oscuro);
+  color: var(--blanco);line-height:1.6}
+
+/* NAV */
+.navbar{  background-color: var(--vino);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);padding:1rem;position:sticky;top:0;z-index:999}
+.container{display:flex;justify-content:space-between;align-items:center}
+.brand{color:#fff;text-decoration:none;font-weight:bold;font-size:1.3rem}
+.nav-links{display:flex;gap:1.2rem}
+.nav-links a{color:#fff;text-decoration:none;font-weight:500;transition:.3s}
+.nav-links a:hover{color:#ffca28}
+.toggle-btn{display:none;font-size:1.8rem;cursor:pointer;  color: var(--blanco);}
+#toggle-menu{display:none}
+
+/* MOSAICO */
+.mosaico .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding:20px}
+.mosaico img{width:100%;border-radius:8px}
+
+/* NOTICIAS */
+.noticias{
+  background-color: var(--vino);padding:2rem;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+.card{background:#fafafa;padding:1rem;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+.card iframe{width:100%;height:200px;border:none;border-radius:8px}
+
+/* SECCIONES DE PELÍCULAS */
+.seccion{padding:2rem;text-align:center}
+.seccion h2{color: #dfd4d4;}
+.seccion p{margin-bottom:1rem;color:#ffffff}
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.videos iframe{width:100%;height:200px;border:none;border-radius:8px}
+
+/* CARTELERA */
+.cartelera{background-color: var(--vino-oscuro);padding:2rem;text-align:center;color:#888484;}
+.peliculas-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.pelicula{background:#e6dede;border-radius:8px;padding:1rem;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
+.pelicula img{width:100%;border-radius:8px;margin-bottom:.5rem}
+.pelicula h3{color:#0e0d0d}
+
+/* ACTORES */
+.mosaico3{padding:2rem;text-align:center;background-color: var(--vino);color:#fff;}
+.mosaico3 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1rem}
+.mosaico3 img{width:100%;border-radius:10px;height:250px;object-fit:cover}
+.mosaico3 p{margin-top:.5rem;font-weight:600}
+
+/* PROMOCIONES */
+.promociones{background:#4e0000;color:#0e0d0d;text-align:center;padding:2rem}
+.promo-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-bottom:2rem}
+.promocion{background:#dfd4d4;padding:1.5rem;border-radius:10px;width:250px}
+.combo img{width:45%;margin:10px;border-radius:8px}
+
+/* MAPA */
+.mapa{text-align:center;padding:2rem}
+.mapa iframe{width:90%;height:300px;border:none;border-radius:10px}
+
+/* FOOTER */
+footer{background:#000;color:#fff;text-align:center;padding:1rem;font-size:.9rem}
+
+/* RESPONSIVE MENU */
+@media(max-width:768px){
+  .nav-links{position:absolute;top:60px;left:0;    background-color: var(--vino-oscuro);width:100%;flex-direction:column;align-items:center;display:none;padding:1rem 0}
+  #toggle-menu:checked+.toggle-btn+.nav-links{display:flex}
+  .toggle-btn{display:block}
+}
